@@ -89,7 +89,7 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>maven-releases</name>
-	      <url>http://localhost:8085/repository/maven-release/</url>
+	      <url>http://54.242.86.138:8086/nexus/content/repositories/ssss/</url>
 	    </repository>
 	    <snapshotRepository>
 	      <id>nexus</id>
