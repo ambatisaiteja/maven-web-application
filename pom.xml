@@ -105,13 +105,13 @@
         <distributionManagement>
             <repository>
               <id>nexus-release</id>
-              <name>maven-releases</name>
-              <url>http://54.242.86.138:8086/nexus/content/repositories/ssss/</url>
+              <name>nexus-release</name>
+              <url>http://54.210.219.133:8086/nexus/content/repositories/nexus-release/</url>
             </repository>
             <snapshotRepository>
               <id>nexus-snapshot</id>
-              <name>maven-snapshot</name>
-              <url>http://54.242.86.138:8086/nexus/content/repositories/nexus-snapshot/</url>
+              <name>nexus-snapshot</name>
+              <url>http://54.210.219.133:8086/nexus/content/repositories/nexus-snapshot/</url>
             </snapshotRepository>
         </distributionManagement>
 
