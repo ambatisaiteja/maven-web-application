@@ -1,0 +1,27 @@
+pipeline{
+    agent any
+    stages{
+        stage("git checkout"){
+            steps{
+                git 'https://github.com/ambatisaiteja/maven-web-application.git'
+            }
+        }
+        stage("maven build"){
+            steps{
+                sh "mvn clean install"
+                sh "mv target/*.war target/myweb.war"
+            }
+        }
+        stage("deploy-dev"){
+            steps{
+                sshagent(['tomcat-new']) {
+                sh """
+                  scp -o strictHostkeyChecking=no target/myweb.war ec2-user@10.20.1.90:/opt/apache-tomcat-8.5.50/webapps
+                 
+                  """
+                }
+            }   
+        } 
+    }
+}    
+    
